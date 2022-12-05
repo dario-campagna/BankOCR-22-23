@@ -1,0 +1,28 @@
+plugins {
+    id 'application'
+}
+
+group 'dssc.assignment.bank'
+version '1.0'
+
+application {
+    mainClass = 'dssc.assignment.bank.Main'
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+test {
+    useJUnitPlatform()
+}
+
+dependencies {
+    testImplementation('org.junit.jupiter:junit-jupiter:5.9.1')
+}
