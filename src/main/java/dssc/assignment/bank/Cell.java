@@ -63,11 +63,23 @@ public class Cell {
 
     public Cell(String cellAsText) {
         this.cellAsText = cellAsText;
+
     }
+
 
     @Override
     public String toString() {
+        if (!isCorrect(cellAsText)){
+            return "?";
+        }
         return cellTextToString.get(cellAsText);
+    }
+
+    private boolean isCorrect(String cellAsText) {
+        if(cellTextToString.containsKey(cellAsText)){
+            return true;
+        }
+        return false;
     }
 
     @Override

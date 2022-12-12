@@ -9,5 +9,7 @@ public class Main {
         reader.readAllEntries().stream()
                 .map(AccountNumber::new)
                 .forEach(System.out::println);
+
     }
+
 }

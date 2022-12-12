@@ -10,6 +10,10 @@ public class AccountNumber {
 
     @Override
     public String toString() {
-        return entry.toString();
+        String s = entry.toString();
+        if (s.contains("?")) {
+            return s + " ILL";
+        }
+        return s;
     }
 }

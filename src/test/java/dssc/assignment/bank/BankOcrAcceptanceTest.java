@@ -49,7 +49,6 @@ public class BankOcrAcceptanceTest {
     }
 
     @Test
-    @Disabled
     public void parseFileWithEntryWithIllegibleCharactersAndShowILLAccountNumberOnConsole() throws Exception {
         URL allOnesSingleEntry = BankOcrAcceptanceTest.class.getClassLoader().getResource("entryIllChars");
         ApplicationRunner application = new ApplicationRunner();
