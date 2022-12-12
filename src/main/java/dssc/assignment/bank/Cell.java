@@ -58,6 +58,7 @@ public class Cell {
         put(NINE_CELL, "9");
     }};
 
+
     private final String cellAsText;
 
     public Cell(String cellAsText) {
@@ -83,4 +84,6 @@ public class Cell {
     public int hashCode() {
         return cellAsText.hashCode();
     }
+
+
 }

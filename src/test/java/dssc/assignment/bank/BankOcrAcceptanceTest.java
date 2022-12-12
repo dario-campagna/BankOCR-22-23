@@ -39,7 +39,6 @@ public class BankOcrAcceptanceTest {
     }
 
     @Test
-    @Disabled
     public void parseFileWithSingleInvalidEntryAndShowERRAccountNumberOnConsole() throws Exception {
         URL allOnesSingleEntry = BankOcrAcceptanceTest.class.getClassLoader().getResource("allOnesEntry");
         ApplicationRunner application = new ApplicationRunner();

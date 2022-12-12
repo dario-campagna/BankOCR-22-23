@@ -21,7 +21,11 @@ public class Entry {
     public String toString() {
         StringBuilder stringBuilder = new StringBuilder();
         cells.forEach(cell -> stringBuilder.append(cell.toString()));
-        return stringBuilder.toString();
+        String string= stringBuilder.toString();
+        if(this.checksum()!=0){
+            string=string+" ERR";
+        }
+        return string;
     }
 
     @Override
@@ -37,5 +41,16 @@ public class Entry {
     @Override
     public int hashCode() {
         return cells.hashCode();
+    }
+
+
+    public int checksum(){
+        int sum=0;
+        int cont=9;
+        for(Cell cell : cells){
+            sum=sum+Integer.parseInt(cell.toString())*cont;
+            cont=cont-1;
+        }
+        return sum%11;
     }
 }
